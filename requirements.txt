@@ -16,3 +16,4 @@ chromadb
 
 # Optional but recommended
 langchain-text-splitters
+sentence-transformers
