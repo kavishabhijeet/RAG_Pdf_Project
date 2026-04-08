@@ -1,0 +1,18 @@
+# LangChain Core
+langchain
+langchain-community
+langchain-core
+
+# Model Integration (OpenAI Example)
+langchain-mistralai
+
+
+# PDF Processing
+pypdf
+python-dotenv
+
+# Vector Database
+chromadb
+
+# Optional but recommended
+langchain-text-splitters
