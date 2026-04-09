@@ -1,24 +1,23 @@
-# Medical PDF RAG Application (GenAI Project)
+# Medical PDF Question Answering System (RAG)
 
-This project is a Retrieval-Augmented Generation (RAG) application that allows users to ask questions from a medical book PDF using LLMs.
+## Project Overview
 
-Built using:
-LangChain
-Mistral AI
-ChromaDB
-HuggingFace Embeddings
-Streamlit
+This project is an AI-powered Question Answering system that allows users to upload medical PDF documents and ask questions in natural language.
+
+The system uses Retrieval-Augmented Generation (RAG) to provide accurate answers based only on the uploaded document content.
+
+This helps in quickly finding important information from lengthy medical PDFs.
 
 ---
 
 ## Features
 
-Upload medical knowledge into vector database
-Ask questions in natural language
-Answers generated using LLM
-Efficient semantic search using embeddings
-Persistent vector database using ChromaDB
-Simple Streamlit UI
+* Upload medical PDF
+* Ask questions in natural language
+* Context-based answers using LLM
+* Uses embeddings for semantic search
+* Streamlit user interface
+* Fast and efficient retrieval
 
 ---
 
@@ -26,100 +25,71 @@ Simple Streamlit UI
 
 Python
 LangChain
-Mistral AI (LLM)
-HuggingFace sentence-transformers
-ChromaDB (Vector Database)
-Streamlit (UI)
+HuggingFace Embeddings
+Chroma Vector Database
+Streamlit
+LLM (Mistral / OpenAI)
+
+---
+
+## How It Works (RAG Pipeline)
+
+1. User uploads PDF
+2. PDF text is extracted
+3. Text is split into chunks
+4. Chunks converted into embeddings
+5. Stored in vector database
+6. User asks question
+7. Relevant chunks retrieved
+8. LLM generates final answer
 
 ---
 
 ## Project Structure
 
-```
+medical-pdf-rag-chatbot
+
 app.py → Streamlit UI
-rag_pipeline.py → RAG pipeline logic
-data/ → medical PDF
-chroma_db/ → vector database
 requirements.txt → dependencies
-```
+sample_data → sample pdf
+screenshots → project images
 
 ---
 
-## How it works
+## How to Run Project
 
-1. PDF is loaded and split into smaller chunks
-2. Each chunk converted into embedding vector
-3. Vectors stored in ChromaDB
-4. User question converted into embedding
-5. Similar chunks retrieved
-6. Context sent to Mistral LLM
-7. LLM generates answer
+1. Clone repository
 
----
+git clone https://github.com/your-username/medical-pdf-rag-chatbot
 
-## Installation
+2. Install dependencies
 
-Clone repository:
-
-```bash
-git clone https://github.com/yourusername/medical-rag.git
-cd medical-rag
-```
-
-Create virtual environment:
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
-```
 
-Add .env file:
+3. Run app
 
-```
-MISTRAL_API_KEY=your_key_here
-HF_TOKEN=your_token_here
-```
-
----
-
-## Run Application
-
-```bash
 streamlit run app.py
-```
 
 ---
 
-## Example Questions
+## Sample Questions
 
-What is diabetes?
-What is hypertension?
-Symptoms of asthma?
-What causes cancer?
-
----
-
-## Learning Outcomes
-
-Built end-to-end RAG pipeline
-Understood embeddings and vector databases
-Learned prompt engineering basics
-Integrated LLM into application
-Built Streamlit UI
-Used GitHub for version control
+What are the symptoms of diabetes?
+What treatment is suggested?
+What precautions are mentioned?
 
 ---
 
 ## Future Improvements
 
-Chat interface
+Chat history memory
 Multiple PDF support
-Deploy on cloud
-Add conversation memory
-Use better embedding models
+Source citation display
+Improved UI
+
+---
+
+## Author
+
+Abhijeet Anand
+Aspiring Data Analyst & GenAI Developer
